@@ -70,3 +70,27 @@ const typed = new Typed(".multiple-text", {
   backDelay: 100,
   loop: true,
 });
+
+/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+const sectionss = document.querySelectorAll("section[id]");
+
+function scrollActive() {
+  const scrollY = window.pageYOffset;
+
+  sectionss.forEach((current) => {
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 58;
+    const sectionId = current.getAttribute("id");
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector(".navbar a[href*=" + sectionId + "]")
+        .classList.add("active");
+    } else {
+      document
+        .querySelector(".navbar a[href*=" + sectionId + "]")
+        .classList.remove("active");
+    }
+  });
+}
+window.addEventListener("scroll", scrollActive);
