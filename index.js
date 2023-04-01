@@ -15,20 +15,6 @@ let navLinks = document.querySelectorAll('header nav a ');
 
 
 window.onscroll = () => {
-  // sections.forEach(sec => {
-  //   let top = window.scrollY;
-  //   let offset = sec.offsetTop - 150;
-  //   let height = sec.offsetHeight;
-  //   let id = sec.getAttribute('id');
-
-  //   if (top >= offset && top < offset + height) {
-  //     navLinks.forEach(links => {
-  //       links.classList.remove('active');
-  //       document.querySelector('header nav a[herf*=' + id + ']').classList.add('active');
-  //     });
-  //   };
-  //  })
-  
   // header
 
   let header = document.querySelector("header");
@@ -64,7 +50,7 @@ ScrollReveal().reveal(".home-content p, .about-content", { origin: "right" });
 // typed js
 
 const typed = new Typed(".multiple-text", {
-  strings: [,'Electrical Engineer!','Web Developer!'],
+  strings: [,'An Electrical Engineer!','A Web Developer!'],
   typeSpeed: 100,
   backSpeed: 50,
   backDelay: 100,
